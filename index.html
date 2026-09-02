@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Todd Lin | Full-Stack Engineer & Creative Technologist</title>
+  <meta name="title" content="Todd Lin | Full-Stack Engineer & Creative Technologist" />
+  <meta name="description" content="Personal portfolio of Todd Lin, Senior Full-Stack Engineer & Creative Technologist. Specializing in high-performance web systems, cloud architectures, and modern UI/UX." />
+  <meta name="keywords" content="Todd Lin, Full-Stack Developer, Frontend Engineer, React, Next.js, Go, Cloud, AI, Portfolio" />
+  <meta name="author" content="Todd Lin" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toddlin.dev/" />
+  <meta property="og:title" content="Todd Lin | Full-Stack Engineer & Creative Technologist" />
+  <meta property="og:description" content="Personal portfolio of Todd Lin. Explore projects, engineering experience, and technical skills." />
+  <meta property="og:image" content="assets/avatar.svg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Todd Lin | Full-Stack Engineer & Creative Technologist" />
+  <meta property="twitter:description" content="Personal portfolio of Todd Lin. Explore projects, engineering experience, and technical skills." />
+  <meta property="twitter:image" content="assets/avatar.svg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+  <!-- Ambient Interactive Canvas & Glow -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ===================================================
+       NAVBAR
+  =================================================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Todd Lin Portfolio">
+        <span class="logo-bracket">&lt;</span>
+        <span>todd.lin</span>
+        <span class="logo-bracket">/&gt;</span>
+        <span class="logo-dot"></span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Accent Switcher -->
+        <div class="theme-picker" title="Switch Theme Accent">
+          <div class="theme-dot indigo active" data-theme="indigo" title="Cyber Indigo"></div>
+          <div class="theme-dot emerald" data-theme="emerald" title="Neon Emerald"></div>
+          <div class="theme-dot rose" data-theme="rose" title="Sunset Rose"></div>
+          <div class="theme-dot amber" data-theme="amber" title="Amber Cyberpunk"></div>
+          <div class="theme-dot cyan" data-theme="cyan" title="Electric Cyan"></div>
+        </div>
+
+        <!-- Sound FX Button -->
+        <button id="sound-toggle" class="sound-toggle-btn" aria-label="Toggle Sound Effects" title="Toggle UI Sound FX">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-toggle" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================
+       1. HERO SECTION
+  =================================================== -->
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-status">
+          <span class="status-dot"></span>
+          <span id="hero-status-text">Open to exciting opportunities</span>
+        </div>
+
+        <div class="hero-greeting">👋 Hi, I'm</div>
+        <h1 class="hero-name gradient-text" id="hero-name">Todd Lin</h1>
+
+        <div class="hero-role-wrapper">
+          <span>I'm a&nbsp;</span>
+          <span class="gradient-text" id="hero-role-text">Full-Stack Engineer</span>
+          <span class="typing-cursor"></span>
+        </div>
+
+        <p class="hero-bio" id="hero-bio">
+          熱衷於打造兼具極致效能與現代美學的數位產品。專注於全端架構、現代前端工程、雲端服務與智慧 AI 應用整合。
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Projects</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Get in Touch</span>
+          </a>
+        </div>
+
+        <div class="hero-socials" id="hero-socials-container">
+          <!-- Dynamic Social Links -->
+        </div>
+
+        <!-- Hero Stats Row -->
+        <div class="hero-stats" id="hero-stats-container">
+          <!-- Dynamic Stats Items -->
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="avatar-card-wrapper">
+          <div class="avatar-glow-ring"></div>
+          
+          <div class="floating-badge badge-top-right">
+            <span style="color: #10b981;">●</span>
+            <span>Available for Hire</span>
+          </div>
+
+          <div class="floating-badge badge-bottom-left">
+            <span>⚡ Next.js / Cloud / AI</span>
+          </div>
+
+          <div class="avatar-card">
+            <div class="avatar-card-inner">
+              <img src="assets/avatar.svg" alt="Todd Lin Avatar" class="avatar-image" />
+              <div class="avatar-name-badge">Todd Lin</div>
+              <div class="avatar-tag">@todd_dev</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       2. ABOUT SECTION
+  =================================================== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">// 01. ABOUT ME</div>
+        <h2 class="section-title">建築於熱情與<span class="gradient-text">工程細節</span>之上</h2>
+        <p class="section-subtitle">致力於打造簡潔優雅且具備強大擴展性的系統架構與數位體驗。</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <div>
+            <h3>全端架構與產品思維</h3>
+            <p>
+              具備多年軟體開發與架構設計經驗，熱衷於探索最前端的網頁技術與雲端運算架構。從微服務後端 API 到精緻細膩的流暢前端介面，皆能以工程化思維提供最佳解法。
+            </p>
+            <p>
+              在工作之餘，積極參與開源社群、研發自動化開發工具，並將人工智慧 LLM / Agentic 應用整合至日常工作流中。
+            </p>
+          </div>
+          <div class="highlight-box">
+            <p id="about-quote">「簡約是終極的細膩。」— 致力於打造簡潔優雅且具備強大擴展性的系統架構。</p>
+          </div>
+        </div>
+
+        <div class="about-pillars" id="about-pillars">
+          <!-- Dynamic Pillars -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       3. SKILLS SECTION
+  =================================================== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">// 02. TECHNICAL ARSENAL</div>
+        <h2 class="section-title">技術棧與<span class="gradient-text">核心能力</span></h2>
+        <p class="section-subtitle">涵蓋現代前端、高併發後端系統、雲端 DevOps 與 AI 整合。</p>
+      </div>
+
+      <div class="skills-container" id="skills-container">
+        <!-- Dynamic Skills Grid -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       4. FEATURED PROJECTS SECTION
+  =================================================== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">// 03. FEATURED WORK</div>
+        <h2 class="section-title">精選專案與<span class="gradient-text">作品展示</span></h2>
+        <p class="section-subtitle">探索兼具現代美學、極致效能與實用價值的精選專案。</p>
+      </div>
+
+      <!-- Project Category Filters -->
+      <div class="project-filters reveal" id="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="ai">AI & Cloud</button>
+        <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+        <button class="filter-btn" data-filter="frontend">Frontend / UI</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projects-grid">
+        <!-- Dynamic Project Cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       5. EXPERIENCE TIMELINE
+  =================================================== -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">// 04. CAREER JOURNEY</div>
+        <h2 class="section-title">職涯經歷與<span class="gradient-text">技術成長</span></h2>
+        <p class="section-subtitle">歷年參與的重要專案、領導經歷與技術實踐記錄。</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-line"></div>
+        <div id="timeline-list">
+          <!-- Dynamic Timeline Items -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       6. CONTACT SECTION
+  =================================================== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">// 05. GET IN TOUCH</div>
+        <h2 class="section-title">讓我們聊聊<span class="gradient-text">新的合作</span></h2>
+        <p class="section-subtitle">無論是有新專案合作、技術交流或是任何想法，隨時歡迎與我聯繫！</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-panel reveal">
+          <div class="contact-card-item">
+            <div class="contact-item-left">
+              <div class="contact-item-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div>
+                <div class="contact-item-label">Email Address</div>
+                <div class="contact-item-val" id="contact-email-val">todd.lin.dev@example.com</div>
+              </div>
+            </div>
+            <button id="copy-email-btn" class="copy-btn" title="Copy Email">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copy</span>
+            </button>
+          </div>
+
+          <div class="contact-card-item">
+            <div class="contact-item-left">
+              <div class="contact-item-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div>
+                <div class="contact-item-label">Location</div>
+                <div class="contact-item-val" id="contact-location-val">Taipei, Taiwan</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-card-item">
+            <div class="contact-item-left">
+              <div class="contact-item-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              </div>
+              <div>
+                <div class="contact-item-label">Timezone & Response</div>
+                <div class="contact-item-val">GMT+8 (Usually within 24 hours)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card reveal reveal-delay-2">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Your Name / 您的姓名</label>
+              <input type="text" id="form-name" class="form-input" placeholder="e.g. Alex Chen" required />
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">Your Email / 電子信箱</label>
+              <input type="email" id="form-email" class="form-input" placeholder="e.g. alex@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">Message / 留言內容</label>
+              <textarea id="form-message" class="form-textarea" placeholder="Tell me about your project or inquiry..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       FOOTER
+  =================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        Designed & Built by <strong>Todd Lin</strong> © 2026. All rights reserved.
+      </div>
+      <a href="#hero" class="footer-back-to-top">
+        <span>Back to Top</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- ===================================================
+       PROJECT DETAIL MODAL
+  =================================================== -->
+  <div id="project-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-dialog">
+      <button id="modal-close" class="modal-close-btn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div id="modal-content-body">
+        <!-- Dynamic Modal Content Injection -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/canvas-bg.js"></script>
+  <script src="js/tilt.js"></script>
+  <script src="js/audio-fx.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<svg width="600" height="380" viewBox="0 0 600 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hyper-bg" x1="0" y1="0" x2="600" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+    <linearGradient id="chart-glow" x1="0" y1="0" x2="0" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="line-grad" x1="0" y1="0" x2="350" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="380" fill="url(#hyper-bg)" />
+
+  <!-- Dashboard Container -->
+  <rect x="40" y="35" width="520" height="310" rx="14" fill="#111827" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" />
+
+  <!-- Top Metric Cards Row -->
+  <rect x="65" y="60" width="145" height="75" rx="8" fill="#1f2937" />
+  <text x="80" y="82" fill="#9ca3af" font-family="sans-serif" font-size="11">Total Requests / sec</text>
+  <text x="80" y="112" fill="#f9fafb" font-family="monospace" font-weight="bold" font-size="20">48,290</text>
+  <text x="165" y="112" fill="#10b981" font-family="sans-serif" font-size="11">+14.2%</text>
+
+  <rect x="225" y="60" width="145" height="75" rx="8" fill="#1f2937" />
+  <text x="240" y="82" fill="#9ca3af" font-family="sans-serif" font-size="11">Avg Latency (p99)</text>
+  <text x="240" y="112" fill="#f9fafb" font-family="monospace" font-weight="bold" font-size="20">1.8ms</text>
+  <text x="325" y="112" fill="#10b981" font-family="sans-serif" font-size="11">-22.5%</text>
+
+  <rect x="385" y="60" width="145" height="75" rx="8" fill="#1f2937" />
+  <text x="400" y="82" fill="#9ca3af" font-family="sans-serif" font-size="11">Throughput</text>
+  <text x="400" y="112" fill="#f9fafb" font-family="monospace" font-weight="bold" font-size="20">2.4 GB/s</text>
+
+  <!-- Large Chart Area -->
+  <rect x="65" y="150" width="465" height="175" rx="10" fill="#172033" stroke="#1f2937" stroke-width="1" />
+  
+  <!-- Chart Grid Lines -->
+  <path d="M85 190 H500 M85 230 H500 M85 270 H500" stroke="#374151" stroke-width="1" stroke-dasharray="4 4" />
+
+  <!-- Area Chart Wave -->
+  <path d="M85 270 Q 140 210, 200 240 T 320 180 T 420 210 T 500 170 L 500 290 L 85 290 Z" fill="url(#chart-glow)" />
+  <path d="M85 270 Q 140 210, 200 240 T 320 180 T 420 210 T 500 170" stroke="url(#line-grad)" stroke-width="3.5" fill="none" stroke-linecap="round" />
+
+  <circle cx="320" cy="180" r="5" fill="#10b981" stroke="#fff" stroke-width="2" />
+  <circle cx="500" cy="170" r="5" fill="#06b6d4" stroke="#fff" stroke-width="2" />
+</svg>

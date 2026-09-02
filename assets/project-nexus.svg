@@ -1,0 +1,57 @@
+<svg width="600" height="380" viewBox="0 0 600 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nexus-bg" x1="0" y1="0" x2="600" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="nexus-accent" x1="0" y1="0" x2="300" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="380" fill="url(#nexus-bg)" />
+  
+  <!-- Subtle Grid -->
+  <g opacity="0.15">
+    <path d="M0 50 H600 M0 100 H600 M0 150 H600 M0 200 H600 M0 250 H600 M0 300 H600 M0 350 H600" stroke="#6366f1" stroke-width="1" />
+    <path d="M50 0 V380 M100 0 V380 M150 0 V380 M200 0 V380 M250 0 V380 M300 0 V380 M350 0 V380 M400 0 V380 M450 0 V380 M500 0 V380 M550 0 V380" stroke="#6366f1" stroke-width="1" />
+  </g>
+
+  <!-- UI Window Container -->
+  <rect x="50" y="40" width="500" height="300" rx="16" fill="#1e293b" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
+  
+  <!-- Window Header -->
+  <rect x="50" y="40" width="500" height="40" rx="16" fill="#0f172a" />
+  <circle cx="75" cy="60" r="5" fill="#ef4444" />
+  <circle cx="95" cy="60" r="5" fill="#f59e0b" />
+  <circle cx="115" cy="60" r="5" fill="#10b981" />
+  <rect x="180" y="52" width="240" height="16" rx="8" fill="#1e293b" />
+  <text x="230" y="64" fill="#94a3b8" font-family="monospace" font-size="10">nexus-ai-workspace.app</text>
+
+  <!-- Sidebar -->
+  <rect x="50" y="80" width="120" height="260" fill="#0b0f19" />
+  <rect x="65" y="100" width="90" height="14" rx="4" fill="url(#nexus-accent)" />
+  <rect x="65" y="125" width="70" height="10" rx="3" fill="#334155" />
+  <rect x="65" y="145" width="80" height="10" rx="3" fill="#334155" />
+  <rect x="65" y="165" width="60" height="10" rx="3" fill="#334155" />
+
+  <!-- Main Chat / Flow Canvas -->
+  <rect x="190" y="100" width="340" height="130" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1" />
+  <rect x="210" y="118" width="160" height="14" rx="4" fill="#6366f1" opacity="0.8" />
+  <rect x="210" y="142" width="300" height="8" rx="3" fill="#475569" />
+  <rect x="210" y="158" width="260" height="8" rx="3" fill="#475569" />
+  <rect x="210" y="174" width="180" height="8" rx="3" fill="#475569" />
+  <rect x="210" y="196" width="90" height="20" rx="5" fill="#10b981" opacity="0.9" />
+
+  <!-- Agent Node Cards -->
+  <rect x="190" y="245" width="160" height="80" rx="10" fill="#0f172a" stroke="#6366f1" stroke-width="1.5" />
+  <text x="205" y="270" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="12">Agent 01: Researcher</text>
+  <rect x="205" y="285" width="120" height="6" rx="3" fill="#38bdf8" />
+  <rect x="205" y="300" width="80" height="6" rx="3" fill="#334155" />
+
+  <rect x="370" y="245" width="160" height="80" rx="10" fill="#0f172a" stroke="#a855f7" stroke-width="1.5" />
+  <text x="385" y="270" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="12">Agent 02: Architect</text>
+  <rect x="385" y="285" width="130" height="6" rx="3" fill="#ec4899" />
+  <rect x="385" y="300" width="90" height="6" rx="3" fill="#334155" />
+</svg>
